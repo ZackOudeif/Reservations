@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             Text("Little Lemon")
+            Text("Reservations")
             Stepper {
                 Text("Reservation for: \(personCount)")
             } onIncrement: {
@@ -25,6 +26,8 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(personCount: 4)
+    }
 }
